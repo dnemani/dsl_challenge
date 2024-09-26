@@ -1,0 +1,12 @@
+[
+    {
+      "name": "GenreId",
+      "type": "INTEGER",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "Name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ]
