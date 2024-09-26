@@ -39,7 +39,7 @@ def create_table(client,table_name, dataset_id):
     table = bigquery.Table(table_id, schema=schema)
 
     # Create the table in BigQuery
-    table = client.create_table(table)  # API request
+    table = client.create_table(table,exists_ok=True)  # API request
 
     print(f"Created table {table.project}.{table.dataset_id}.{table.table_id}")
 
