@@ -1,5 +1,6 @@
 import json
 from google.cloud import bigquery
+from google.oauth2 import service_account
 
 def load_schema_from_file(file_path):
     with open(file_path, 'r') as file:
@@ -16,13 +17,32 @@ def create_bigquery_schema(schema_json):
         ))
     return schema
 
+def create_bigquery_dataset(client, dataset_id):
+
+    dataset_id = f"{client.project}.{dataset_id}"
+    dataset = bigquery.Dataset(dataset_id)
+    dataset.location = "US"
+    dataset = client.create_dataset(dataset, exists_ok=True)  # API request
+    print(f"Created dataset {client.project}.{dataset.dataset_id}")
+
 def create_genres_table():
-    # Initialize a BigQuery client
-    client = bigquery.Client()
+    # Path to your service account key file
+    key_path = 'qwiklabs-gcp-00-cc9e35073c89-02d2bd1ed53b.json'  # Replace with the path to your service account key file
+
+    # Authenticate using the service account key file
+    credentials = service_account.Credentials.from_service_account_file(key_path)
+
+    print(f"Project Id {credentials.project_id}")
+
+    # Initialize a BigQuery client with the credentials
+    client = bigquery.Client(credentials=credentials, project=credentials.project_id)
 
     # Define the dataset and table name
-    dataset_id = 'your_dataset_id'  # Replace with your dataset ID
-    table_id = f'{dataset_id}.genres'
+    dataset_id = 'default'  # Replace with your dataset ID
+    table_id = f'{client.project}.{dataset_id}.genres'
+    
+    # Create the dataset
+    create_bigquery_dataset(client, dataset_id)
 
     # Load the schema from the JSON file
     schema_json = load_schema_from_file('schema/genres.json')  # Replace with the path to your genres.json file
@@ -31,7 +51,7 @@ def create_genres_table():
     schema = create_bigquery_schema(schema_json)
 
     # Create a Table object
-    table = bigquery.Table(table_id, schema=schema)
+    table = bigquery.Table( table_id, schema=schema)
 
     # Create the table in BigQuery
     table = client.create_table(table)  # API request
