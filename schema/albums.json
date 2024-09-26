@@ -1,0 +1,17 @@
+[
+    {
+      "name": "AlbumId",
+      "type": "INTEGER",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "Title",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "ArtistId",
+      "type": "INTEGER",
+      "mode": "REQUIRED"
+    }
+  ]

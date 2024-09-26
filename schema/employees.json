@@ -1,0 +1,77 @@
+[
+    {
+      "name": "EmployeeId",
+      "type": "INTEGER",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "LastName",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "FirstName",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "Title",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "ReportsTo",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "BirthDate",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "HireDate",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "Address",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "City",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "State",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "Country",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "PostalCode",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "Phone",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "Fax",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "Email",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    }
+  ]
