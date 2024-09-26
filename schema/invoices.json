@@ -1,0 +1,49 @@
+
+[
+    {
+        "name": "InvoiceId",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "CustomerId",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "InvoiceDate",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "BillingAddress",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "BillingCity",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "BillingState",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "BillingCountry",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "BillingPostalCode",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "Total",
+        "type": "FLOAT",
+        "mode": "REQUIRED"
+    }
+]
+
