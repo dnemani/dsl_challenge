@@ -22,21 +22,25 @@ def load_table_from_csv(client, table_id, csv_path, write_disposition):
     print(f"Loaded {table_id} with {job.output_rows} rows")
 
 def main():
-    key_path = 'path/to/your-service-account-key.json'  # Replace with the path to your service account key file
+    key_path = 'qwiklabs-gcp-00-cc9e35073c89-02d2bd1ed53b.json' # Replace with the path to your service account key file
     credentials = service_account.Credentials.from_service_account_file(key_path)
     client = bigquery.Client(credentials=credentials, project=credentials.project_id)
 
-    project = 'your_project_id'  # Replace with your project ID
-    dataset_id = 'your_dataset_id'  # Replace with your dataset ID
-    table_id = f'{project}.{dataset_id}.genres'  # Replace with your table name
+    project = credentials.project_id  # Replace with your project ID
+    dataset_id = 'default'  # Replace with your dataset ID
+    tables = ['albums', 'artists', 'customers', 'employees', 'genres', 'invoice_items', 'invoices', 'media_types', 'playlists', 'playlist_track', 'tracks']
+    for table in tables:
+        table_id = f'{project}.{dataset_id}.{table}'  # Replace with your table name
 
     # Download CSV file from GitHub
-    csv_url = 'https://github.com/GoogleCloudPlatform/specialized-training-content/blob/main/courses/DSL/chinook-db/chinook-tables-csv/genres.csv?raw=true'
-    csv_path = 'genres.csv'
-    download_file(csv_url, csv_path)
+
+        csv_url = f'https://github.com/GoogleCloudPlatform/specialized-training-content/blob/main/courses/DSL/chinook-db/chinook-tables-csv/{table}.csv?raw=true'
+        print(csv_url)
+        csv_path = f'{table}.csv'
+        download_file(csv_url, csv_path)
 
     # Load CSV file into BigQuery
-    load_table_from_csv(client, table_id, csv_path, bigquery.WriteDisposition.WRITE_TRUNCATE)
+        load_table_from_csv(client, table_id, csv_path, bigquery.WriteDisposition.WRITE_TRUNCATE)
 
 if __name__ == "__main__":
     main()
