@@ -1,0 +1,12 @@
+[
+  {
+    "name": "MediaTypeId",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "Name",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  }
+]

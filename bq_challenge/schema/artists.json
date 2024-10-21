@@ -1,0 +1,12 @@
+[
+    {
+      "name": "ArtistId",
+      "type": "INTEGER",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "Name",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    }
+  ]
