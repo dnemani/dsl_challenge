@@ -1,0 +1,12 @@
+[
+  {
+    "name": "PlaylistId",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "TrackId",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+  }
+]

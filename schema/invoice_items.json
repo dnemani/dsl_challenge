@@ -1,0 +1,29 @@
+
+
+[
+    {
+        "name": "InvoiceLineId",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "InvoiceId",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "TrackId",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "UnitPrice",
+        "type": "FLOAT",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "Quantity",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    }
+]
