@@ -1,0 +1,56 @@
+[
+  {
+    "name": "bankId",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "The bank ID of a bank involved in a transaction"
+  },
+  {
+    "name": "bank_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Name of bank, collected at account creation"
+  },
+  {
+    "name": "contact_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Contact name for bank, collected at account creation"
+  },
+  {
+    "name": "first_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "First name of the bank, collected at account creation"
+  },
+  {
+    "name": "last_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Last name of the bank, collected at account creation"
+  },
+  {
+    "name": "street_address",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Street address of the bank, collected at account creation"
+  },
+  {
+    "name": "city",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "City of the bank, collected at account creation"
+  },
+  {
+    "name": "state",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "State of the bank, collected at account creation"
+  },
+  {
+    "name": "zip_code",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Zip code of the bank, collected at account creation"
+  }
+]

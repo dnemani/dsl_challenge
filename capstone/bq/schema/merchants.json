@@ -1,0 +1,56 @@
+[
+  {
+    "name": "merchantId",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "The merchant ID of a merchant involved in a transaction"
+  },
+  {
+    "name": "company_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Name of merchant, collected at account creation"
+  },
+  {
+    "name": "contact_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Contact name for merchant, collected at account creation"
+  },
+  {
+    "name": "first_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "First name of the merchant, collected at account creation"
+  },
+  {
+    "name": "last_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Last name of the merchant, collected at account creation"
+  },
+  {
+    "name": "street_address",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Street address of the merchant, collected at account creation"
+  },
+  {
+    "name": "city",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "City of the merchant, collected at account creation"
+  },
+  {
+    "name": "state",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "State of the merchant, collected at account creation"
+  },
+  {
+    "name": "zip_code",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Zip code of the merchant, collected at account creation"
+  }
+]

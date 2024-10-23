@@ -1,0 +1,50 @@
+[
+  {
+    "name": "transactionId",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Unique Id for transaction"
+  },
+  {
+    "name": "step",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Number of hours from beginning of data collection"
+  },
+  {
+    "name": "action",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Type of transaction"
+  },
+  {
+    "name": "amount",
+    "type": "FLOAT",
+    "mode": "REQUIRED",
+    "description": "Amount of the transaction"
+  },
+  {
+    "name": "idOrig",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UserId of user originating the transaction"
+  },
+  {
+    "name": "idDest",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UserId, BankId or MerchantId of destination for the transaction"
+  },
+  {
+    "name": "isFraud",
+    "type": "BOOLEAN",
+    "mode": "REQUIRED",
+    "description": "Flag for fraudulent transactions"
+  },
+  {
+    "name": "isFlaggedFraud",
+    "type": "BOOLEAN",
+    "mode": "REQUIRED",
+    "description": "Flag for transactions flagged as fraudulent"
+  }
+]

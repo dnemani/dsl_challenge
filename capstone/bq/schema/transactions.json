@@ -1,0 +1,68 @@
+[
+  {
+    "name": "transactionId",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Unique Id for transaction"
+  },
+  {
+    "name": "step",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Number of hours from beginning of data collection"
+  },
+  {
+    "name": "action",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Type of transaction, there are five possible values: PAYMENT, CASH_IN, CASH_OUT, DEBIT, TRANSFER."
+  },
+  {
+    "name": "idOrig",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UserId of user originating the transaction"
+  },
+  {
+    "name": "oldBalanceOrig",
+    "type": "FLOAT",
+    "mode": "REQUIRED",
+    "description": "Balance of idOrig account before transaction"
+  },
+  {
+    "name": "newBalanceOrig",
+    "type": "FLOAT",
+    "mode": "REQUIRED",
+    "description": "Balance of idOrig account after transaction"
+  },
+  {
+    "name": "idDest",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UserId, BankId or MerchantId of destination for the transaction"
+  },
+  {
+    "name": "oldBalanceDest",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Balance of idDest account before transaction if relevant"
+  },
+  {
+    "name": "newBalanceDest",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Balance of idDest account after transaction if relevant"
+  },
+  {
+    "name": "isUnauthorizedOverdraft",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE",
+    "description": "Flag for unauthorized overdrafts if relevant"
+  },
+  {
+    "name": "isSuccessful",
+    "type": "BOOLEAN",
+    "mode": "REQUIRED",
+    "description": "Flag for successful transactions"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "userId",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "The User ID of a User involved in a transaction"
+  },
+  {
+    "name": "first_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "First name of the user, collected at account creation"
+  },
+  {
+    "name": "last_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Last name of the user, collected at account creation"
+  },
+  {
+    "name": "street_address",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Street address of the user, collected at account creation"
+  },
+  {
+    "name": "city",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "City of the user, collected at account creation"
+  },
+  {
+    "name": "state",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "State of the user, collected at account creation"
+  },
+  {
+    "name": "zip_code",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Zip code of the user, collected at account creation"
+  }
+]
