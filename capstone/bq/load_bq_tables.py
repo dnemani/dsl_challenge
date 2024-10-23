@@ -37,7 +37,7 @@ def main():
     for table in tables:
         table_id = f'{project_id}.{dataset_id}.{table}'  # Replace with your table name
         # Load CSV file into BigQuery
-        csv_path = f'gs://{project_id}/{table}/'
+        csv_path = f'gs://{project_id}/{table}/*'
         load_table_from_csv(client, table_id, csv_path, bigquery.WriteDisposition.WRITE_TRUNCATE)
 
 if __name__ == "__main__":
