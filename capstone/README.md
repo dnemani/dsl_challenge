@@ -17,4 +17,8 @@ about when gsutil -m can be advantageous.
 ```
 #### Setup Cloud Shell Python env
 
-```pip install google-cloud google.auth google-cloud-bigquery```
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install google-cloud google.auth google-cloud-bigquery
+```
