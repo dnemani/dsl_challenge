@@ -45,7 +45,7 @@ def main():
         project_id = credentials.project_id 
  
     dataset_id = 'default'  # Replace with your dataset ID
-    tables = ['albums', 'artists', 'customers', 'employees', 'genres', 'invoice_items', 'invoices', 'media_types', 'playlists', 'playlist_track', 'tracks']
+    tables = ['banks', 'fraud_transactions', 'merchants', 'transactions', 'users', 'sample_preproc_data']
     for table in tables:
         table_id = f'{project_id}.{dataset_id}.{table}'  # Replace with your table name
 
