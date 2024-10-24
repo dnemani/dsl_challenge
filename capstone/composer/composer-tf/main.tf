@@ -11,7 +11,7 @@ resource "google_service_account" "composer_account" {
 
 resource "google_project_iam_member" "composer_account_bindings" {
   for_each = toset([
-    "roles/composer.worker",
+    "roles/composer.worker","roles/composer.serviceAgent",
   ])
 
   project = var.project_id
