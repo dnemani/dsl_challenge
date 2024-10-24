@@ -15,3 +15,10 @@ run significantly faster if you instead use gsutil -m cp ... Please
 see the -m section under "gsutil help options" for further information
 about when gsutil -m can be advantageous.
 ```
+#### Setup Cloud Shell Python Virtual env
+
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install google-cloud google.auth google-cloud-bigquery
+```
